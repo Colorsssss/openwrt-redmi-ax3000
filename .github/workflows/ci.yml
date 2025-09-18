@@ -40,6 +40,10 @@ jobs:
         run: |
           mv .configg .config
           make defconfig
+          rm -rf ./package/feeds/packages/miniupnpd
+          rm -rf ./package/feeds/packages/miniupnpc
+          mv ./miniupnpd ./package/feeds/packages/miniupnpd
+          mv ./miniupnpc ./package/feeds/packages/miniupnpc
 
       - name: Download
         run: |
